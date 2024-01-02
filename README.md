@@ -12,7 +12,7 @@
 wget https://github.com/adif-kirito/script/raw/main/user.sh
 ```
 
-1. Check User Status <br>
+#### 1. Check User Status <br>
 Show user uid, gid and groups
 2. Check Password Status <br>
 Show password status. ex: pswd expires, account expires
