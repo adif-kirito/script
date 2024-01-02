@@ -24,6 +24,8 @@ while true; do
 	echo "5. Lock User"
 	echo "6. Delete User"
     echo "7. Quit"
+    echo
+
     
     # Prompt user for choice
     read -p "Enter your choice: " choice
@@ -40,6 +42,8 @@ while true; do
             fi
 
             passwd -S $username
+            echo -e
+
 			sleep 3
             ;;
 		2)
@@ -53,6 +57,8 @@ while true; do
             fi
 
             chage -l $username
+            echo -e
+
 			sleep 3
             ;;
 		3)
@@ -66,6 +72,8 @@ while true; do
             fi
 
             groups $username
+            echo -e
+
 			sleep 3
             ;;
 		4)
