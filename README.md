@@ -1,17 +1,15 @@
 # Script For Linux Server Administration
-<br>
 
 ## Ussage
 ```
 wget <raw file link>
 ```
-<br>
 
 ## user.sh
 
 For user management
 
-1. Check User Status
+1. Check User Status <br>
 lorem epsum
 2. Check User Last Lock
 lorem epsum
