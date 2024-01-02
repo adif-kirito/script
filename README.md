@@ -3,12 +3,8 @@
 *** Author: adif-kirito
 *** Date: 2/1/2024
 -->
-# Script For Linux Server Administration
 
-## Ussage
-```
-wget <raw file link>
-```
+# Script For Linux Server Administration
 
 ## user.sh
 
@@ -17,17 +13,17 @@ wget https://github.com/adif-kirito/script/raw/main/user.sh
 ```
 
 1. Check User Status <br>
-lorem epsum
-2. Check User Last Lock <br>
-lorem epsum
+Show user uid, gid and groups
+2. Check Password Status <br>
+Show password status. ex: pswd expires, account expires
 3. Check User Group <br>
-lorem epsum
+Show which group does the user belong to
 4. Create User (grp wheel) <br>
-lorem epsum
+Create user and assign to group wheel
 5. Lock User <br>
-lorem epsum
+Lock user account
 6. Delete User <br>
-lorem epsum
+Delete user account
 7. Quit <br>
-lorem epsum
+Quit script
 <p align="right">(<a href="#readme-top">back to top</a>)</p>

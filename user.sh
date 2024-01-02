@@ -18,7 +18,7 @@ while true; do
     # Display menu options
     echo "Menu:"
 	echo "1. Check User Status"
-	echo "2. Check User Last Lock"
+	echo "2. Check Password Status"
 	echo "3. Check User Group"
     echo "4. Create User (grp wheel)"
 	echo "5. Lock User"
@@ -41,13 +41,13 @@ while true; do
                 continue
             fi
 
-            passwd -S $username
+            id $username
             echo -e
 
 			sleep 3
             ;;
 		2)
-			# To check user last lock
+			# To check password status
             # Prompt user for username
             read -p "Enter username (or 'q' to go back to the menu): " username
 
