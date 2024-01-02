@@ -12,7 +12,7 @@ wget <raw file link>
 
 ## user.sh
 
-For user management
+For user management. [Click here to copy raw link](https://github.com/adif-kirito/script/raw/main/user.sh)
 
 1. Check User Status <br>
 lorem epsum
