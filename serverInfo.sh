@@ -32,11 +32,11 @@ while true; do
 	read -p "Would you like to save the output? [Y/N] " output
 	case ${output:0:1} in
         	y|Y)
-			echo "File will be saved on $path/LinuxAudit.txt "
+            date=$ (date +%Y%m%d)
 			echo
 			read -p "Please denote the path for the file to save the output: " path
 			echo
-                	touch $path/LinuxAudit.txt
+                	touch $path/LinuxAudit_$date.txt
 		{            
     			echo "###############################################"
                 	echo
@@ -52,55 +52,55 @@ while true; do
                 	echo
                 	echo "###############################################"
                 	echo
-                	echo -e "\e[0;33m 3.  Linux Distribution Information///// \e[0m"
+                	echo -e "\e[0;33m 2.  Linux Distribution Information///// \e[0m"
                 	echo	
 					cat /etc/redhat-release
                 	echo
                 	echo "###############################################"
                 	echo
-                	echo -e "\e[0;33m 4. List Current Logged In Users///// \e[0m"
+                	echo -e "\e[0;33m 3. List Current Logged In Users///// \e[0m"
                 	echo
                 	w
                 	echo
                 	echo "###############################################"
                 	echo
-                	echo -e "\e[0;33m 5. $HOSTNAME Uptime Information///// \e[0m"
+                	echo -e "\e[0;33m 4. $HOSTNAME Uptime Information///// \e[0m"
                 	echo
                 	uptime
                 	echo
                 	echo "###############################################"
                 	echo
-                	echo -e "\e[0;33m 8. Check Available Space///// \e[0m"
+                	echo -e "\e[0;33m 5. Check Available Space///// \e[0m"
                 	echo
                 	df -h
                 	echo
                 	echo "###############################################"
                 	echo
-                	echo -e "\e[0;33m 9. Check Memory///// \e[0m"
+                	echo -e "\e[0;33m 6. Check Memory///// \e[0m"
                 	echo
                 	free -h
                 	echo
                 	echo "###############################################"
                		echo
-               		echo -e "\e[0;33m 13. Check Running Processes///// \e[0m"
+               		echo -e "\e[0;33m 7. Check Running Processes///// \e[0m"
                 	echo
                 	ps -a
                 	echo
                 	echo "###############################################"
                 	echo
-                	echo -e "\e[0;33m 10. History (Commands)///// \e[0m"
+                	echo -e "\e[0;33m 8. History (Commands)///// \e[0m"
                 	echo
                 	history
                 	echo
                 	echo "###############################################"
                 	echo
-                	echo -e "\e[0;33m 21. List User Names///// \e[0m"
+                	echo -e "\e[0;33m 9. List User Names///// \e[0m"
                 	echo
                 	cut -d: -f1 /etc/passwd
                 	echo
                 	echo "###############################################"
                 	echo
-                	echo -e "\e[0;33m 22. Check for Null Passwords///// \e[0m"
+                	echo -e "\e[0;33m 10. Check for Null Passwords///// \e[0m"
                 	echo
                 	users="$(cut -d: -f 1 /etc/passwd)"
                 	for x in $users
@@ -110,7 +110,7 @@ while true; do
                 	echo
                 	echo "###############################################"
                 	echo
-                	echo -e "\e[0;33m 27. Failed login attempts///// \e[0m"
+                	echo -e "\e[0;33m 11. Failed login attempts///// \e[0m"
                 	echo
                 	grep --color "failure" /var/log/secure
                		echo
@@ -123,9 +123,12 @@ while true; do
                 	echo Executed on :
                 	date
                 	echo
+			        echo "File will be saved on $path/LinuxAudit_$date.txt "
+                    echo
+
 
                 	exit 0;
-        } >  $path/LinuxAudit.txt
+        } >  $path/LinuxAudit_$date.txt
 	break
         ;;
         n|N)
