@@ -32,11 +32,13 @@ while true; do
 	read -p "Would you like to save the output? [Y/N] " output
 	case ${output:0:1} in
         	y|Y)
-            date=$(date +%Y%m%d)
+            #date=$(date +%Y%m%d)
+            date=$(date +%s)
 			echo
 			read -p "Please denote the path for the file to save the output: " path
 			echo
-                	touch $path/linuxAudit_$date.txt
+            echo "File will be saved on $path/linuxAudit_$date.txt "
+            touch $path/linuxAudit_$date.txt
 		{            
     			echo "###############################################"
                 	echo
@@ -123,8 +125,7 @@ while true; do
                 	echo Executed on :
                 	date
                 	echo
-			        echo "File will be saved on $path/linuxAudit_$date.txt "
-                    echo
+			        
 
 
                 	exit 0;
