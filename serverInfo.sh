@@ -36,7 +36,7 @@ while true; do
 			echo
 			read -p "Please denote the path for the file to save the output: " path
 			echo
-                	touch $path/LinuxAudit_$date.txt
+                	touch $path/linuxAudit_$date.txt
 		{            
     			echo "###############################################"
                 	echo
@@ -123,12 +123,12 @@ while true; do
                 	echo Executed on :
                 	date
                 	echo
-			        echo "File will be saved on $path/LinuxAudit_$date.txt "
+			        echo "File will be saved on $path/linuxAudit_$date.txt "
                     echo
 
 
                 	exit 0;
-        } >  $path/LinuxAudit_$date.txt
+        } >  $path/linuxAudit_$date.txt
 	break
         ;;
         n|N)
