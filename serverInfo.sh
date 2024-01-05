@@ -32,7 +32,6 @@ echo
 date=$(date +%s)
 echo
 path="/home/admin/Documents/log"
-read -p "Please denote the path for the file to save the output: " path
 echo
 echo "File will be saved on $path/linuxAudit_$date.txt "
 touch $path/linuxAudit_$date.txt
