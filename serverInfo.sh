@@ -32,7 +32,7 @@ while true; do
 	read -p "Would you like to save the output? [Y/N] " output
 	case ${output:0:1} in
         	y|Y)
-            date=$ (date +%Y%m%d)
+            date=$(date +%Y%m%d)
 			echo
 			read -p "Please denote the path for the file to save the output: " path
 			echo
