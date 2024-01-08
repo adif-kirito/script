@@ -103,10 +103,6 @@ touch $path/linuxAudit_$date.txt
 
 } >  $path/linuxAudit_$date.txt
 
-sleep 10
-
 scp /home/admin/Documents/log/linuxAudit_$date.txt ubuntuadmin@192.168.46.53:/home/ubuntuadmin/Documents/log
-
-sleep 20
 
 rm /home/admin/Documents/log/linuxAudit_$date.txt
