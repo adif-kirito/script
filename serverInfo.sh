@@ -2,34 +2,7 @@
 #
 # sokdr
 #
-tput clear
-trap ctrl_c INT
-function ctrl_c() {
-        echo "**You pressed Ctrl+C...Exiting"
-        exit 0;
-}
-#
-echo -e "###############################################"
-echo -e "###############################################"
-echo -e "###############################################"
-echo " _     _                      _             _ _ _   "
-echo "| |   (_)_ __  _   ___  __   / \  _   _  __| (_) |_ "
-echo "| |   | |  _ \| | | \ \/ /  / _ \| | | |/ __ | | __|"
-echo "| |___| | | | | |_| |>  <  / ___ \ |_| | (_| | | |_ "
-echo "|_____|_|_| |_|\____/_/\_\/_/   \_\____|\____|_|\__|"
-echo
-echo "###############################################"
-echo "Welcome to security audit of your linux machine:"
-echo "###############################################"
-echo
-echo "Script will automatically gather the required info:"
-echo "The checklist can help you in the process of hardening your system:"
-echo "Note: it has been tested for Debian Linux Distro:"
-echo
-sleep 3
-echo
-#date=$(date +%Y%m%d)
-date=$(date +%s)
+date=$(date +%Y%m%d)
 echo
 path="/home/admin/Documents/log"
 echo
