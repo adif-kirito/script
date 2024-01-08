@@ -123,3 +123,9 @@ touch $path/linuxAudit_$date.txt
     echo
 
 } >  $path/linuxAudit_$date.txt
+
+scp linuxAudit* ubuntuadmin@192.168.46.53:/home/ubuntuadmin/Documents/log
+
+sleep 3
+
+rm /home/admin/Documents/log/linuxAudit*
