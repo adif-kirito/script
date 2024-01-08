@@ -97,8 +97,10 @@ touch $path/linuxAudit_$date.txt
 
 } >  $path/linuxAudit_$date.txt
 
-scp linuxAudit* ubuntuadmin@192.168.46.53:/home/ubuntuadmin/Documents/log
+sleep 10
 
-sleep 3
+scp linuxAudit_$date.txt ubuntuadmin@192.168.46.53:/home/ubuntuadmin/Documents/log
 
-rm /home/admin/Documents/log/linuxAudit*
+sleep 20
+
+rm /home/admin/Documents/log/linuxAudit_$date.txt
