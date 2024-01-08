@@ -2,14 +2,20 @@
 #
 # sokdr
 #
-date=$(date +%Y%m%d)
-echo
+#date=$(date +%Y%m%d)
+date=$(date +%s)
 path="/home/admin/Documents/log"
-echo
-echo "File will be saved on $path/linuxAudit_$date.txt "
 touch $path/linuxAudit_$date.txt
 {            
-    echo "###############################################"
+    echo "#####################################################"
+    echo
+    echo " _     _                      _             _ _ _   "
+    echo "| |   (_)_ __  _   ___  __   / \  _   _  __| (_) |_ "
+    echo "| |   | |  _ \| | | \ \/ /  / _ \| | | |/ __ | | __|"
+    echo "| |___| | | | | |_| |>  <  / ___ \ |_| | (_| | | |_ "
+    echo "|_____|_|_| |_|\____/_/\_\/_/   \_\____|\____|_|\__|"
+    echo
+    echo "#####################################################"
     echo
     echo
     sleep 3
@@ -99,7 +105,7 @@ touch $path/linuxAudit_$date.txt
 
 sleep 10
 
-scp linuxAudit_$date.txt ubuntuadmin@192.168.46.53:/home/ubuntuadmin/Documents/log
+scp /home/admin/Documents/log/linuxAudit_$date.txt ubuntuadmin@192.168.46.53:/home/ubuntuadmin/Documents/log
 
 sleep 20
 
