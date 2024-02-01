@@ -16,8 +16,8 @@ class SquareThread(threading.Thread):
 
     def run(self):
         print("Calculating Square of 10,000,000...")
-        square = [i * i for i in range(10000000)]
-        print("Square of 10,000,000 calculated.")
+        square = 10000000 ** 2
+        print("Square of 10,000,000 is:", square)
 
 class CubeThread(threading.Thread):
     def __init__(self):
@@ -25,8 +25,8 @@ class CubeThread(threading.Thread):
 
     def run(self):
         print("Calculating Cube of 10,000,000...")
-        cube = [i * i * i for i in range(10000000)]
-        print("Cube of 10,000,000 calculated.")
+        cube = 10000000 ** 3
+        print("Cube of 10,000,000 is:", cube)
 
 def main():
     pi_thread = PiThread()
