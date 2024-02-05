@@ -21,7 +21,7 @@ touch $path/linuxAudit_$date.txt
     sleep 3
     echo
     echo "Script Starts ;)"
-    START=$(date +%s)
+    START=(date +%Y%m%d)
     echo
     echo -e "\e[0;33m 1. Linux Kernel Information////// \e[0m"
     echo
