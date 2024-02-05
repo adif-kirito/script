@@ -1,9 +1,8 @@
 #!/bin/bash
 #
-# sokdr
+# By Adif Firdaus
 #
-#date=$(date +%Y%m%d)
-date=$(date +%s)
+date=$(date +%Y%m%d)
 path="/home/admin/Documents/log"
 touch $path/linuxAudit_$date.txt
 {            
@@ -21,7 +20,7 @@ touch $path/linuxAudit_$date.txt
     sleep 3
     echo
     echo "Script Starts ;)"
-    START=(date +%Y%m%d)
+    date=$(date +%s)
     echo
     echo -e "\e[0;33m 1. Linux Kernel Information////// \e[0m"
     echo
