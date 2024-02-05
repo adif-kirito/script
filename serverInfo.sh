@@ -108,6 +108,12 @@ echo
     echo
     echo "###############################################"
     echo
+    echo -e "\e[0;33m 12. Active Internet Connections and Open Ports///// \e[0m"
+    echo
+    netstat -natp
+    echo
+    echo "###############################################"
+    echo
     END=$(date +%s)
     DIFF=$(( $END - $START ))
     echo Script completed in $DIFF seconds :
