@@ -3,10 +3,12 @@
 # By Adif Firdaus
 #
 date=$(date +%Y%m%d)
-path="/home/admin/Documents/log"
-touch $path/linuxAudit_$date.txt
+path=$(pwd)
+hostname=$(hostname)
+name="$hostname"_linuxAudit_"$date".txt
+touch $path/$name
 {            
-    echo "#####################################################"
+    echo "#######################################################"
     echo
     echo " _     _                      _             _ _ _   "
     echo "| |   (_)_ __  _   ___  __   / \  _   _  __| (_) |_ "
@@ -14,7 +16,7 @@ touch $path/linuxAudit_$date.txt
     echo "| |___| | | | | |_| |>  <  / ___ \ |_| | (_| | | |_ "
     echo "|_____|_|_| |_|\____/_/\_\/_/   \_\____|\____|_|\__|"
     echo
-    echo "#####################################################"
+    echo "#######################################################"
     echo
     echo
     sleep 3
@@ -100,8 +102,4 @@ touch $path/linuxAudit_$date.txt
     date
     echo
 
-} >  $path/linuxAudit_$date.txt
-
-scp /home/admin/Documents/log/linuxAudit_$date.txt ubuntuadmin@192.168.46.53:/home/ubuntuadmin/Documents/log
-
-rm /home/admin/Documents/log/linuxAudit_$date.txt
+} >  $path/$name
