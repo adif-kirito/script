@@ -7,6 +7,20 @@ path=$(pwd)
 hostname=$(hostname)
 name="$hostname"_linuxAudit_"$date".txt
 touch $path/$name
+
+echo "#######################################################"
+echo
+echo " _     _                      _             _ _ _   "
+echo "| |   (_)_ __  _   ___  __   / \  _   _  __| (_) |_ "
+echo "| |   | |  _ \| | | \ \/ /  / _ \| | | |/ __ | | __|"
+echo "| |___| | | | | |_| |>  <  / ___ \ |_| | (_| | | |_ "
+echo "|_____|_|_| |_|\____/_/\_\/_/   \_\____|\____|_|\__|"
+echo
+echo "#######################################################"
+echo
+echo "Script is running..."
+echo
+echo
 {            
     echo "#######################################################"
     echo
@@ -22,7 +36,7 @@ touch $path/$name
     sleep 3
     echo
     echo "Script Starts ;)"
-    date=$(date +%s)
+    START=$(date +%s)
     echo
     echo -e "\e[0;33m 1. Linux Kernel Information////// \e[0m"
     echo
@@ -42,7 +56,7 @@ touch $path/$name
     echo
     echo "###############################################"
     echo
-    echo -e "\e[0;33m 4. $HOSTNAME Uptime Information///// \e[0m"
+    echo -e "\e[0;33m 4. Server Uptime Information///// \e[0m"
     echo
     uptime
     echo
@@ -103,3 +117,4 @@ touch $path/$name
     echo
 
 } >  $path/$name
+echo "Script completed!!!"
