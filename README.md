@@ -13,8 +13,8 @@
 wget https://github.com/adif-kirito/script/raw/main/user.sh
 ```
 
-## serverInformation.sh
+## serverInfo.sh
 
 ```
-wget https://github.com/adif-kirito/script/raw/main/serverInformation.sh
+wget https://github.com/adif-kirito/script/raw/main/serverInfo.sh
 ```
