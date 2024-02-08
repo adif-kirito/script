@@ -18,3 +18,21 @@ wget https://github.com/adif-kirito/script/raw/main/user.sh
 ```
 wget https://github.com/adif-kirito/script/raw/main/serverInfo.sh
 ```
+
+## lastLogin.sh
+
+```
+wget https://github.com/adif-kirito/script/raw/main/lastLogin.sh
+```
+
+## linuxAudit.sh
+
+```
+wget https://github.com/adif-kirito/script/raw/main/linuxAudit.sh
+```
+
+## serverInfo.sh
+
+```
+wget https://github.com/adif-kirito/script/raw/main/serverInfo.sh
+```
