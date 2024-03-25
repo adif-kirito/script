@@ -18,7 +18,7 @@ echo "#######################################################"
 echo
 echo
 echo "Current hostname: $hostname"
-read -p "Do you want to change the hostname? (y/n)" choice
+read -p "Do you want to change the hostname? (y/n): " choice
 case "$choice" in
   y|Y)
     read -p "Enter new Hostname: " hostname
