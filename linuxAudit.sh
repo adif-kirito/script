@@ -61,7 +61,7 @@ while true; do
                 	echo
                 	echo -e "\e[0;33m 3.  Linux Distribution Information///// \e[0m"
                 	echo	
-					cat /etc/redhat-release
+			cat /etc/redhat-release
                 	echo
                 	echo "###############################################"
                 	echo
