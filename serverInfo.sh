@@ -5,8 +5,6 @@
 date=$(date +%Y%m%d)
 path=$(pwd)
 hostname=$(hostname)
-name="$hostname"_linuxAudit_"$date".txt
-touch $path/$name
 
 echo "#######################################################"
 echo
@@ -18,8 +16,29 @@ echo "|_____|_|_| |_|\____/_/\_\/_/   \_\____|\____|_|\__|"
 echo
 echo "#######################################################"
 echo
-echo "Script is running..."
 echo
+echo "Current hostname: $hostname"
+read -p "Do you want to change the hostname? (y/n)" choice
+case "$choice" in
+  y|Y)
+    read -p "Enter new Hostname: " hostname
+    echo "Hostname changed to: $hostname"
+    sleep 2
+    echo "Script is running..."
+    ;;
+  n|N)
+    echo "No changes made to the hostname."
+    echo "Script is running..."
+    ;;
+  *)
+    echo "Invalid choice. Please enter 'y' or 'n'."
+    ;;
+esac
+
+
+name="$hostname"_linuxAudit_"$date".txt
+touch $path/$name
+
 echo
 {            
     echo "#######################################################"
@@ -62,21 +81,21 @@ echo
     echo
     echo "###############################################"
     echo
-    echo -e "\e[0;33m 5. Check Available Space///// \e[0m"
+    echo -e "\e[0;33m 5. Check Disk Usage///// \e[0m"
     echo
     df -h
     echo
     echo "###############################################"
     echo
-    echo -e "\e[0;33m 6. Check Memory///// \e[0m"
+    echo -e "\e[0;33m 6. Check CPU and Memory Usage///// \e[0m"
     echo
-    free -h
+    top -n 1 -b
     echo
     echo "###############################################"
     echo
     echo -e "\e[0;33m 7. Check Running Processes///// \e[0m"
     echo
-    ps -a
+    ps -aux
     echo
     echo "###############################################"
     echo
@@ -110,7 +129,7 @@ echo
     echo
     echo -e "\e[0;33m 12. Active Internet Connections and Open Ports///// \e[0m"
     echo
-    netstat -natp
+    netstat -tulpn
     echo
     echo "###############################################"
     echo
